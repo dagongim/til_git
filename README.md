@@ -329,3 +329,9 @@ git remote rename 옛이름 새이름
  git commit -m "[docs]:깃학습"
  git push origin main
 ```
+
+## 5. github의 소스를 다운받아서 작업하는 방법
+
+- github 주소를 주의하셔야 합니다
+- 기준은 `https` 로 진행 중입니다
+- 코드 소스 기준이 `ssh`면 인증을 다시 처리하는 과정 필요
