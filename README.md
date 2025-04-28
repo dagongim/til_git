@@ -77,4 +77,48 @@ git config --global user.email "이메일"
 git config --global user.email
 ```
 
+## 4. git 작업하기 (실습)
+
+### 4.1. git 프로젝트 관리 초기화 하기
+
+```bash
+git init
+```
+
+### 4.2. git 현재 상태 파악하기
+
+```bash
+git status
+```
+
+### 4.3. git 현재 수정된 내용, 파일, 폴더 등을 저장하기
+
+- 원하는 파일만 저장하기
+
+```bash
+git add README.md
+```
+
+- 모든 파일 및 폴더 저장하기(추천)
+
+```bash
+git add .
+```
+
+### 4.4. 수정 내역 남기기
+
+- 한줄 작업 메모
+
+```bash
+git commit -m "깃 작업 관련 설명글 작성"
+```
+
+- 여러줄 메모 (제목, 상세내용)
+
+```bash
+git commit
+```
+
+### 4.5 커밋 내용 컨벤션 알아보기
+
 # github
