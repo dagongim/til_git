@@ -175,6 +175,12 @@ git log
 git log -oneline
 ```
 
+- 하나의 commit 상세보기
+
+```bash
+git show 커밋아이디
+```
+
 ### 4.6.1. 각 항목 관련 사항 이해하기
 
 - commit : 고유한 커밋 번호 (아이디)
@@ -182,4 +188,118 @@ git log -oneline
 - date : 날짜
 - 메세지 : 상세 내용
 
+### 4.7. 브랜치 작업 해보기
+
+- `나뭇가지` 라는 의미로 원 줄기로부터 파생되는 것을 말함
+- 원 `소스`로부터 파생한 새롭게 `분기한 소스` 관리를 말함
+- 브랜치를 생성시에는 add와 commit이 완료되어야
+
+#### 4.7.1. 브렌치 생성하기
+
+```bash
+git add .
+git commit -m "[docs]:브랜치 실습 test 생성하기"
+git branch test
+```
+
+#### 4.7.2. 브렌치 목록보기
+
+```bash
+git branch -v
+```
+
+#### 4.7.3. 브렌치 이동하기
+
+```bash
+git switch test
+```
+
+#### 4.7.4. 브렌치 삭제하기
+
+```bash
+git branch -D test
+git branch -v
+```
+
+#### 4.7.5. 브렌치 합치기
+
+- 브랜치를 하나로 합쳐주기
+
+- 주의사항 : `main 브랜치에서 test 브랜치를 합쳐줄 겁니다`
+
+```bash
+git merge 합쳐주고자 하는 브랜치명
+```
+
+### 4.8. git 브랜치 충돌 해결해보기
+
+- git 브랜치를 nerge 하면 많이 발생합니다
+- 나는 `main`에서 계속 작업을 하고 있다
+- `login 브랜치`에서 나는 로그인 기능을 구현했다
+
 # github
+
+## 1. GitHub 회원가입하기
+
+- https://github.com
+
+## 2. GitHub 프로젝트(Repository) 생성하기
+
+- 만약 til_git 프로젝트 생성해다면 GitHub 에도 동일하게 생성하자
+- public 으로 셋팅 : 외부로 소스 공개
+- description 은 작성해주자 : 프로젝트 설명
+
+## 3. github 인증하기
+
+### 3.1. 무조건 github 에 로그인 된 상태로 시도하셔야 합니다
+
+### 3.2. `윈도우 > 자격 증명 관리자 > windows 자격 증명` 에서 github 확인
+
+- 새로 생성하길 권장합니다
+- PC 정리 또는 자리 이동시 반드시 삭제하셔야 합니다
+
+## 4. github 프로젝트 연결하기
+
+### 4.1. 원격 저장소 주소 지정하기
+
+- `remote` 는 원격(인터넷) 을 말합니다
+- `add` 는 추가하라
+- `origin`
+  - http 주소를 간략하게 별칭을 준 것 입니다
+  - 단어는 마음대로 하셔도 되요
+  - `원격 이름`을 말함
+
+```bash
+git remote add origin https://github.com/dagongim/til_git.git
+```
+
+### 4.2. 원격 저장소 목록 보기
+
+```bash
+git remote -v
+```
+
+### 4.3. 원격 저장소에 소스 등록하기
+
+- 습관적으로 하셨으면 좋은 작업 (ctrl + s, 즉, 저장 후)
+
+```bash
+git add .
+git commit -m "[docs]:최초등록"
+```
+
+- 소스 업로드를 `push 한다` 라고 합니다
+
+```bash
+git push -u origin main
+```
+
+- `-u` 옵션을 붙이셨다면 이후로는 `git push` 만 하면 됨
+
+### 4.4. 원격 저장소 관리하기
+
+- 목록 보기
+
+```bash
+git remote -v
+```
